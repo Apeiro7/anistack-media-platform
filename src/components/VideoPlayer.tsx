@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, ChevronLeft, ChevronRight, Play, Clock, List, Star, Layers } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import type { VideoSeason, VideoEpisode } from '../data/content';
@@ -89,7 +90,7 @@ export default function VideoPlayer({
     upcoming: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
   };
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4"
       style={{ background: 'rgba(0,0,0,0.92)', backdropFilter: 'blur(12px)' }}>
 
@@ -304,6 +305,7 @@ export default function VideoPlayer({
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
