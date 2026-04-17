@@ -94,7 +94,7 @@ export const softwareData: Software[] = [
     name: 'VS Code',
     description: 'Free, lightweight, and powerful code editor by Microsoft with rich extension support.',
     category: 'Editor',
-    icon: 'https://cdn.simpleicons.org/visualstudiocode/007ACC',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1280px-Visual_Studio_Code_1.35_icon.svg.png',
     url: 'https://code.visualstudio.com',
     tags: ['editor', 'coding', 'microsoft', 'free'],
     featured: true,
