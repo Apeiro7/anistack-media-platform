@@ -84,32 +84,48 @@ function AppContent() {
       <ScrollToTop />
       <PWAInstallBanner />
 
-      {/* Footer */}
-      <footer className={`relative z-10 border-t mt-8 py-6 px-4
+      {/* Professional Footer */}
+      <footer className={`relative z-10 border-t mt-12 py-8 px-4
         ${dark ? 'border-white/5 bg-[#060610]' : 'border-gray-200 bg-white'}`}>
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2">
-            <span className={`font-black tracking-widest ${dark ? 'text-cyan-400' : 'text-blue-600'}`}
-              style={{ fontFamily: "'Orbitron', sans-serif" }}>
-              ANISTACK
-            </span>
-            <span className={dark ? 'text-gray-700' : 'text-gray-400'}>•</span>
-            <span className={dark ? 'text-gray-600' : 'text-gray-400'}
-              style={{ fontFamily: "'Rajdhani', sans-serif" }}>
-              Your Digital Vault
-            </span>
+        <div className="max-w-7xl mx-auto flex flex-col gap-6">
+          
+          {/* Top row: Brand & Navigation */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-2">
+              <span className={`font-black tracking-widest ${dark ? 'text-cyan-400' : 'text-blue-600'}`}
+                style={{ fontFamily: "'Orbitron', sans-serif", fontSize: '15px' }}>
+                ANISTACK
+              </span>
+              <span className={dark ? 'text-gray-700' : 'text-gray-300'}>•</span>
+              <span className={dark ? 'text-gray-500' : 'text-gray-500'}
+                style={{ fontFamily: "'Rajdhani', sans-serif", fontSize: '14px' }}>
+                Your Digital Vault
+              </span>
+            </div>
+            
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm">
+              {['Home', 'Anime', 'Videos', 'Software', 'Courses', 'Tools', 'Links'].map(item => (
+                <button key={item}
+                  onClick={() => handleSectionChange(item.toLowerCase())}
+                  className={`transition-colors cursor-pointer hover:opacity-100 font-medium
+                    ${dark ? 'text-gray-400 hover:text-cyan-400' : 'text-gray-500 hover:text-blue-600'}`}
+                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  {item}
+                </button>
+              ))}
+            </div>
           </div>
-          <div className="flex items-center gap-4">
-            {['Home', 'Anime', 'Videos', 'Software', 'Courses', 'Tools', 'Links'].map(item => (
-              <button key={item}
-                onClick={() => handleSectionChange(item.toLowerCase())}
-                className={`transition-colors cursor-pointer hover:opacity-80
-                  ${dark ? 'text-gray-600 hover:text-cyan-400' : 'text-gray-400 hover:text-blue-600'}`}
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                {item}
-              </button>
-            ))}
+
+          {/* Divider */}
+          <div className={`h-px w-full ${dark ? 'bg-white/5' : 'bg-gray-100'}`} />
+
+          {/* Bottom row: Legal & Copyright */}
+          <div className={`text-center md:text-left text-[11px] leading-relaxed tracking-wide
+            ${dark ? 'text-gray-500' : 'text-gray-400'}`}
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+            Site design / logo © 2026 AniStack by Amit; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" className={`underline transition-colors ${dark ? 'hover:text-cyan-400' : 'hover:text-blue-500'}`}>CC BY-SA</a>. rev 2026.4.17.1
           </div>
+          
         </div>
       </footer>
     </div>
