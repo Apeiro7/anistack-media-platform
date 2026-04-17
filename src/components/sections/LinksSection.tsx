@@ -13,6 +13,7 @@ const CAT_COLORS: Record<string, { dark: string; light: string }> = {
   Learning: { dark: 'text-green-400 border-green-500/20 bg-green-500/5', light: 'text-green-700 border-green-200 bg-green-50' },
   Design: { dark: 'text-pink-400 border-pink-500/20 bg-pink-500/5', light: 'text-pink-700 border-pink-200 bg-pink-50' },
   Anime: { dark: 'text-purple-400 border-purple-500/20 bg-purple-500/5', light: 'text-purple-700 border-purple-200 bg-purple-50' },
+  Movies: { dark: 'text-red-400 border-red-500/20 bg-red-500/5', light: 'text-red-700 border-red-200 bg-red-50' },
 };
 
 export default function LinksSection() {
