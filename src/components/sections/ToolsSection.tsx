@@ -67,10 +67,13 @@ export default function ToolsSection() {
                 ? 'bg-[#0d0d1a] border-white/5 hover:border-violet-500/30 hover:shadow-[0_0_20px_rgba(139,92,246,0.1)]'
                 : 'bg-white border-gray-200 hover:border-violet-300 hover:shadow-md'}`}>
             <div className="flex items-start justify-between mb-3">
-              <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-2xl
-                ${dark ? 'bg-white/5' : 'bg-gray-100'}`}>
-                {tool.icon}
+              
+              {/* UPDATED ICON RENDERER */}
+              <div className={`w-11 h-11 rounded-xl flex items-center justify-center p-2 flex-shrink-0
+                ${dark ? 'bg-white/5' : 'bg-white border border-gray-100'}`}>
+                <img src={tool.icon} alt={`${tool.name} logo`} className="w-full h-full object-contain" />
               </div>
+
               <div className="flex items-center gap-2">
                 {tool.free && (
                   <span className={`text-xs px-2 py-0.5 rounded-full border font-bold
