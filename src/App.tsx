@@ -123,7 +123,7 @@ function AppContent() {
           <div className={`text-center md:text-left text-[11px] leading-relaxed tracking-wide
             ${dark ? 'text-gray-500' : 'text-gray-400'}`}
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            Site design / logo © 2026 AniStack by Amit; user contributions licensed under <a href="https://raw.githubusercontent.com/Apeiro7/anistack/refs/heads/main/LICENSE" target="_blank" rel="noopener noreferrer" className={`underline transition-colors ${dark ? 'hover:text-cyan-400' : 'hover:text-blue-500'}`}>MIT License</a>. rev 2026.4.17.1
+            Site design / logo © 2026 AniStack by Amit; user contributions licensed under <a href="https://raw.githubusercontent.com/Apeiro7/anistack/refs/heads/main/LICENSE" target="_blank" rel="noopener noreferrer" className={`underline transition-colors ${dark ? 'hover:text-cyan-400' : 'hover:text-blue-500'}`}>MIT License</a>.
           </div>
           
         </div>
