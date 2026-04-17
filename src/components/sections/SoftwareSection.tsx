@@ -48,7 +48,12 @@ export default function SoftwareSection() {
                   ${dark
                     ? 'bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border-cyan-500/20 hover:border-cyan-500/40 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)]'
                     : 'bg-gradient-to-br from-blue-50 to-purple-50 border-blue-200 hover:border-blue-400 hover:shadow-md'}`}>
-                <div className="text-3xl mb-3">{sw.icon}</div>
+                
+                {/* FEATURED ICON RENDERER */}
+                <div className="mb-4 h-10 flex items-center">
+                  <img src={sw.icon} alt={`${sw.name} logo`} className="h-8 w-auto object-contain drop-shadow-md" />
+                </div>
+                
                 <div className="flex items-start justify-between">
                   <div>
                     <h4 className={`font-bold text-sm mb-1 ${dark ? 'text-white' : 'text-gray-900'}`}
@@ -109,10 +114,13 @@ export default function SoftwareSection() {
                 ? 'bg-[#0d0d1a] border-white/5 hover:border-green-500/20 hover:shadow-[0_0_15px_rgba(0,255,128,0.05)]'
                 : 'bg-white border-gray-200 hover:border-green-300 hover:shadow-md'}`}>
             <div className="flex items-start gap-3 mb-3">
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0
-                ${dark ? 'bg-white/5' : 'bg-gray-100'}`}>
-                {sw.icon}
+              
+              {/* GRID ICON RENDERER */}
+              <div className={`w-10 h-10 rounded-xl flex items-center justify-center p-2 flex-shrink-0
+                ${dark ? 'bg-white/5' : 'bg-white border border-gray-100'}`}>
+                <img src={sw.icon} alt={`${sw.name} logo`} className="w-full h-full object-contain" />
               </div>
+
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between">
                   <h4 className={`font-bold text-sm truncate ${dark ? 'text-white' : 'text-gray-900'}`}
