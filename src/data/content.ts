@@ -603,4 +603,5 @@ export const linksData: Link[] = [
   { id: 'l13', name: 'MoviesMod', description: 'Download the latest Hollywood and Bollywood movies in various resolutions including 480p, 720p, and 1080p and 4K, choose from list below.', url: 'https://modlist.in/', icon: 'https://modlist.in/favicont.png', category: 'Movies' },
   { id: 'l16', name: 'ProtonMovies', description: 'Welcome to ProtonMovies – Your All-in-One Entertainment Gateway', url: 'http://protonmovies.com/', icon: 'https://static.protonmovies.link/favicon.ico', category: 'Movies' },
   { id: 'l17', name: 'BollyFlix', description: 'Welcome to BollyFlix. ', url: 'https://bollyflix.to/', icon: 'https://bollyflixcdn.site/wp-content/uploads/2023/05/Bollyflix-movies.png', category: 'Movies' },
+  { id: 'l18', name: 'Bolly4u', description: 'Download HD Movies in 480p, 720p, 1080p - Bolly4u Official Site.', url: 'https://bolly4u.camera/', icon: 'https://bolly4u.camera/templates/bolly4u/images/logo-2x.png', category: 'Movies' },
 ];
