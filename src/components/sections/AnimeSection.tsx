@@ -46,12 +46,12 @@ export default function AnimeSection() {
         </div>
       </div>
 
-      {/* Featured */}
+      {/* Featured (Kept as Landscape Banners) */}
       {featured.length > 0 && (
         <div className="space-y-4">
           <h3 className={`text-xs font-black tracking-widest ${dark ? 'text-purple-400' : 'text-purple-700'}`}
             style={{ fontFamily: "'Orbitron', sans-serif" }}>⚡ FEATURED</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {featured.map(anime => (
               <FeaturedCard key={anime.id} anime={anime} dark={dark} onPlay={() => setSelected(anime)} />
             ))}
@@ -96,8 +96,8 @@ export default function AnimeSection() {
         </div>
       </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      {/* Grid - Updated to fit more portrait cards per row */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 sm:gap-4">
         {filtered.map(anime => (
           <AnimeCard key={anime.id} anime={anime} dark={dark} onPlay={() => setSelected(anime)} />
         ))}
@@ -128,6 +128,7 @@ export default function AnimeSection() {
   );
 }
 
+// Featured Card remains Landscape (aspect-video)
 function FeaturedCard({ anime, dark, onPlay }: { anime: AnimeEntry; dark: boolean; onPlay: () => void }) {
   return (
     <div className={`relative rounded-2xl overflow-hidden border cursor-pointer group
@@ -154,7 +155,7 @@ function FeaturedCard({ anime, dark, onPlay }: { anime: AnimeEntry; dark: boolea
               <Star className="w-3 h-3 fill-current" />{anime.rating}
             </span>
           </div>
-          <h3 className="text-white font-bold text-base" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{anime.title}</h3>
+          <h3 className="text-white font-bold text-base md:text-lg" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{anime.title}</h3>
           <div className="flex items-center gap-3 mt-1 text-xs text-gray-300">
             <span className="flex items-center gap-1"><Tv className="w-3 h-3" />{anime.seasons.length} Season{anime.seasons.length > 1 ? 's' : ''}</span>
             <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{anime.episodes} Episodes</span>
@@ -165,51 +166,66 @@ function FeaturedCard({ anime, dark, onPlay }: { anime: AnimeEntry; dark: boolea
   );
 }
 
+// Anime Card converted to Portrait (aspect-[3/4])
 function AnimeCard({ anime, dark, onPlay }: { anime: AnimeEntry; dark: boolean; onPlay: () => void }) {
   return (
     <div
-      className={`rounded-2xl overflow-hidden border cursor-pointer group transition-all duration-300 hover:scale-[1.02]
+      className={`rounded-xl sm:rounded-2xl flex flex-col overflow-hidden border cursor-pointer group transition-all duration-300 hover:-translate-y-1
         ${dark
-          ? 'bg-[#0d0d1a] border-white/5 hover:border-cyan-500/30 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)]'
-          : 'bg-white border-gray-200 hover:border-blue-300 hover:shadow-md'}`}
+          ? 'bg-[#0d0d1a] border-white/5 hover:border-cyan-500/50 hover:shadow-[0_8px_20px_rgba(0,212,255,0.15)]'
+          : 'bg-white border-gray-200 hover:border-blue-400 hover:shadow-lg'}`}
       onClick={onPlay}>
-      <div className="relative aspect-video overflow-hidden">
+      
+      {/* Changed Aspect Ratio from aspect-video to aspect-[3/4] */}
+      <div className="relative aspect-[3/4] overflow-hidden bg-gray-900 flex-shrink-0">
         <img src={anime.thumbnail} alt={anime.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+        
+        {/* Play Overlay */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-          <div className="w-12 h-12 rounded-full bg-cyan-500/80 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-cyan-500/90 backdrop-blur-sm flex items-center justify-center">
             <Play className="w-5 h-5 text-black fill-current ml-0.5" />
           </div>
         </div>
+
+        {/* Status Badge */}
         <div className="absolute top-2 right-2">
-          <span className={`text-xs px-2 py-0.5 rounded-full border font-semibold capitalize ${STATUS_COLORS[anime.status] || ''}`}>
+          <span className={`text-[10px] sm:text-xs px-2 py-0.5 rounded-md border font-bold capitalize backdrop-blur-sm ${STATUS_COLORS[anime.status] || ''}`}>
             {anime.status}
           </span>
         </div>
+
+        {/* Rating Badge */}
         <div className="absolute bottom-2 left-2">
-          <span className="flex items-center gap-1 text-xs text-yellow-400 font-bold">
-            <Star className="w-3 h-3 fill-current" />{anime.rating}
+          <span className="flex items-center gap-1 text-[10px] sm:text-xs text-yellow-400 font-black drop-shadow-md">
+            <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current" />{anime.rating}
           </span>
         </div>
       </div>
 
-      <div className="p-3">
-        <h3 className={`font-bold text-sm mb-1 line-clamp-1 ${dark ? 'text-white' : 'text-gray-900'}`}
-          style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{anime.title}</h3>
-        <p className={`text-xs mb-2 line-clamp-2 leading-relaxed ${dark ? 'text-gray-500' : 'text-gray-500'}`}>
-          {anime.description}
-        </p>
-        <div className="flex items-center justify-between">
+      <div className="p-2.5 sm:p-3 flex-1 flex flex-col justify-between">
+        <div>
+          {/* Adjusted line clamp to look good in a narrow card */}
+          <h3 className={`font-bold text-xs sm:text-sm mb-1 line-clamp-2 leading-snug ${dark ? 'text-white' : 'text-gray-900'}`}
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }} title={anime.title}>
+            {anime.title}
+          </h3>
+          <p className={`text-[10px] sm:text-xs mb-2 line-clamp-1 leading-relaxed hidden sm:block ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
+            {anime.description}
+          </p>
+        </div>
+        
+        <div className="flex items-center justify-between mt-auto pt-1">
           <div className="flex flex-wrap gap-1">
-            {anime.genre.slice(0, 2).map(g => (
-              <span key={g} className={`text-xs px-1.5 py-0.5 rounded-md border
-                ${dark ? 'border-cyan-500/20 text-cyan-400/70 bg-cyan-500/5' : 'border-blue-200 text-blue-600 bg-blue-50'}`}>
+            {anime.genre.slice(0, 1).map(g => (
+              <span key={g} className={`text-[9px] sm:text-[10px] px-1.5 py-0.5 rounded border uppercase tracking-wider font-bold
+                ${dark ? 'border-cyan-500/20 text-cyan-400/80 bg-cyan-500/10' : 'border-blue-200 text-blue-600 bg-blue-50'}`}>
                 {g}
               </span>
             ))}
           </div>
-          <div className={`flex items-center gap-1 text-xs ${dark ? 'text-gray-500' : 'text-gray-400'}`}>
-            <Tv className="w-3 h-3" />{anime.seasons.length}S
+          <div className={`flex items-center gap-1 text-[10px] sm:text-xs font-semibold ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
+            <Tv className="w-3 h-3" />{anime.episodes}
           </div>
         </div>
       </div>
