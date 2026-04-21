@@ -597,6 +597,8 @@ export const linksData: Link[] = [
   { id: 'l9', name: 'Behance', description: 'Showcase and discover creative work.', url: 'https://behance.net', icon: 'https://cdn.simpleicons.org/behance/1769FF', category: 'Design' },
   { id: 'l10', name: 'AnimeWorld India', description: 'Anime & Cartoon Streaming website.', url: 'https://watchanimeworld.net/', icon: 'https://watchanimeworld.net/wp-content/uploads/AWI-SiteTitle-1.png', category: 'Anime' },
   { id: 'l11', name: 'Dead Toons India', description: 'Largest online anime and cartoon database.', url: 'https://deadtoons.org/', icon: 'https://deadtoons.org/public/images/logo.png', category: 'Anime' },
+  { id: 'l14', name: 'ToonWorld4All', description: 'Anime & Cartoon Streaming website.', url: 'https://toonworld4all.me/', icon: 'https://toonworld4all.me/', category: 'Anime' },
+  { id: 'l15', name: 'Rare Toons India', description: 'Anime & Cartoon Streaming website.', url: 'https://rareanimes.app/', icon: 'https://img.rareanimes.app/wp-content/uploads/2023/11/cropped-Rare-Animes-India.png', category: 'Anime' },
   { id: 'l12', name: 'Crunchyroll', description: 'The world\'s most popular anime streaming service.', url: 'https://crunchyroll.com', icon: 'https://cdn.simpleicons.org/crunchyroll/F47521', category: 'Anime' },
   { id: 'l13', name: 'MoviesMod', description: 'Download the latest Hollywood and Bollywood movies in various resolutions including 480p, 720p, and 1080p and 4K, choose from list below.', url: 'https://modlist.in/', icon: 'https://modlist.in/favicont.png', category: 'Movies' },
 ];
