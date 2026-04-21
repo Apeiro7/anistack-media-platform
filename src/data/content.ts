@@ -421,7 +421,7 @@ export const animeData: AnimeEntry[] = [
     year: 2008,
     rating: 10,
     status: 'completed',
-    episodes: 13,
+    episodes: 46,
     studio: 'Man of Action',
     featured: true,
     seasons: [
@@ -592,6 +592,134 @@ export const animeData: AnimeEntry[] = [
             id: 'e13',
             title: 'War of the Worlds, Part 2',
             embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC8xTVQ2YkJmTUgifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9xWUZBVXVuMEgifV0%3D',
+            duration: '24:00'
+          },
+        ],
+      },
+
+      {
+        id: 's3',
+        seasonNumber: 3,
+        title: 'Season 3',
+        episodes: [
+          {
+            id: 'e1',
+            title: 'Vengeance of Vilgax, Part 1',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9Sbkt1QVEtdTgifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC96MnI5Ukpvc0UifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e2',
+            title: 'Vengeance of Vilgax, Part 2',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9kcGZiYlJuZXcifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC90dzNNRmtDazEifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e3',
+            title: 'Inferno',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC93NnBXMkJlbEkifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC93ajMyQlRqNTkifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e4',
+            title: 'Fools Gold',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC85V3M1X3BxM1c1In0seyJsYW5ndWFnZSI6IkVuZ2xpc2giLCJsaW5rIjoiaHR0cHM6XC9cL3Nob3J0LmljdVwva0l2YmZ2OEphIn1d',
+            duration: '24:00'
+          },
+          {
+            id: 'e5',
+            title: 'Simple',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9VbVlNUVlpT3QifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC93VmxrQXZjek0ifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e6',
+            title: 'Vreedle, Vreedle',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC92c19GZEZVX04ifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC83MXpIdEhDamNOIn1d',
+            duration: '24:00'
+          },
+          {
+            id: 'e7',
+            title: 'Singlehanded',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9pQzQ0Z2V0RWUifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9BMzQ4Y0lqQmwifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e8',
+            title: 'If All Else Fails',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9TSnkzMjQ0Vkg3In0seyJsYW5ndWFnZSI6IkVuZ2xpc2giLCJsaW5rIjoiaHR0cHM6XC9cL3Nob3J0LmljdVwvVWIzczByWHR0In1d',
+            duration: '24:00'
+          },
+          {
+            id: 'e9',
+            title: 'In Charms Way',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9jeFI2eUxZLUgifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC8tRFdsMWZPejIifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e10',
+            title: 'Ghost Town',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9MOHUyblg1cVcifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9JSFM0YmVTalIifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e11',
+            title: 'Trade Off',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9ZYjB3TmY2QnoifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9KR2VOX2ZQTzcifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e12',
+            title: 'Busy Box',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC85S2FCQThuQjIifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC8yWEFDSDRkQzYifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e13',
+            title: 'Con of Rath',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9jNHFhaEVIMUwifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC95Y1JFX0RackMifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e14',
+            title: 'Primus',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC8xRmNoVjBhOWgifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC80OHh2aUVoUkEifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e15',
+            title: 'Time Heals',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC96aGk1OG5oVWcifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9kZG1KMEtvVDQifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e16',
+            title: 'The Secret of Chromastone',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC8zLVhVNWVseHp3In0seyJsYW5ndWFnZSI6IkVuZ2xpc2giLCJsaW5rIjoiaHR0cHM6XC9cL3Nob3J0LmljdVwvNGctaU9Oc0pWdyJ9XQ%3D%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e17',
+            title: 'Above and Beyond',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9aWWFzUkJnTjYifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9WVHZ4MTduQS0ifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e18',
+            title: 'Vendetta',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9UOEhWS0VRU2cifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC80VTYyY05fNW8ifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e19',
+            title: 'The Final Battle, Part 1',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC81TE5nRGxpc2YifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9yQkRsOEVhd3IifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e20',
+            title: 'The Final Battle, Part 2',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9fQkY2eGxXMHcifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9ZaktxVzktUTgifV0%3D',
             duration: '24:00'
           },
         ],
