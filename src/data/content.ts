@@ -410,11 +410,8 @@ export const animeData: AnimeEntry[] = [
       },
     ],
   },
-];
-
+  
 // AUTO-GENERATED FILE
-
-export const animeData = [
   {
     id: 'a1',
     title: 'Ben 10 Alien Force 1X1',
