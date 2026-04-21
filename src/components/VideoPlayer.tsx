@@ -36,7 +36,7 @@ export default function VideoPlayer({
   const [activeEpisode, setActiveEpisode] = useState<VideoEpisode>(seasons[0].episodes[0]);
   const [showEpisodeList, setShowEpisodeList] = useState(true);
   
-  const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
+  const [viewMode, setViewMode] = useState<'list' | 'grid'>('grid'); // Defaulted to grid/thumbnail view
 
   // Lock body scroll when modal is open
   useEffect(() => {
@@ -137,10 +137,10 @@ export default function VideoPlayer({
         <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-y-auto lg:overflow-hidden">
           
           {/* Left Column: Video Area & Description */}
-          <div className="flex flex-col flex-none lg:flex-1 lg:min-w-0 lg:overflow-y-auto pb-4 lg:pb-0">
+          <div className="flex flex-col flex-none lg:flex-1 lg:min-w-0 lg:overflow-y-auto pb-4 lg:pb-0" style={{ scrollbarWidth: 'thin' }}>
             
             {/* Video Player */}
-            <div className="w-full bg-black flex-shrink-0 aspect-video sm:max-h-[60vh] lg:max-h-[65vh]">
+            <div className="w-full bg-black flex-shrink-0 flex items-center justify-center overflow-hidden aspect-video lg:aspect-auto lg:h-[45vh] xl:h-[55vh]">
               <iframe
                 key={activeEpisode.id}
                 src={activeEpisode.embedUrl}
@@ -217,9 +217,9 @@ export default function VideoPlayer({
             </div>
           </div>
 
-          {/* Right Column: Episode List Sidebar */}
+          {/* Right Column: Episode List Sidebar - Wider to accommodate large thumbnails */}
           {showEpisodeList && (
-            <div className={`w-full lg:w-80 flex flex-col flex-shrink-0 lg:border-l
+            <div className={`w-full lg:w-96 flex flex-col flex-none lg:flex-shrink-0 lg:border-l lg:h-full lg:overflow-hidden
               ${dark ? 'border-cyan-500/20 bg-[#09090f]' : 'border-gray-200 bg-gray-50'}`}>
 
               {/* Season Selector & View Toggle */}
@@ -268,7 +268,9 @@ export default function VideoPlayer({
 
               {/* Episode List / Grid Area */}
               <div className="flex-none lg:flex-1 lg:overflow-y-auto lg:min-h-0 pb-6 lg:pb-0" style={{ scrollbarWidth: 'thin' }}>
-                <div className={`p-2 ${viewMode === 'grid' ? 'grid grid-cols-2 gap-2' : 'space-y-1'}`}>
+                
+                {/* CHANGED HERE: One episode per row layout for thumbnails using flex-col gap-3 */}
+                <div className={`p-3 ${viewMode === 'grid' ? 'flex flex-col gap-3' : 'space-y-1'}`}>
                   {activeSeason.episodes.map((episode, idx) => {
                     const isActive = episode.id === activeEpisode.id;
                     
@@ -282,28 +284,29 @@ export default function VideoPlayer({
                               ? dark ? 'border-cyan-500 shadow-[0_0_15px_rgba(0,212,255,0.2)]' : 'border-blue-500 shadow-md ring-2 ring-blue-500/20' 
                               : dark ? 'border-gray-800 hover:border-cyan-500/50' : 'border-gray-200 hover:border-blue-300'}`}
                         >
+                          {/* Aspect Video enforces the 16:9 Landscape ratio perfectly */}
                           <div className="relative aspect-video w-full bg-black">
                             <img 
                               src={episode.thumbnail || thumbnail} 
                               alt={episode.title} 
                               className={`w-full h-full object-cover transition-opacity ${isActive ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'}`}
                             />
-                            <div className="absolute top-1 left-1 bg-black/80 text-white px-1.5 py-0.5 rounded text-[10px] font-bold tracking-wider backdrop-blur-sm border border-white/10">
+                            <div className="absolute top-2 left-2 bg-black/80 text-white px-2 py-1 rounded text-xs font-bold tracking-wider backdrop-blur-sm border border-white/10">
                               EP {idx + 1}
                             </div>
-                            <div className="absolute bottom-1 right-1 bg-black/80 text-white px-1.5 py-0.5 rounded text-[10px] flex items-center gap-1 backdrop-blur-sm">
-                              <Clock className="w-2.5 h-2.5" /> {episode.duration}
+                            <div className="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-xs flex items-center gap-1 backdrop-blur-sm">
+                              <Clock className="w-3 h-3" /> {episode.duration}
                             </div>
                             {isActive && (
                               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                <div className={`w-8 h-8 rounded-full flex items-center justify-center ${dark ? 'bg-cyan-500/90' : 'bg-blue-600/90'}`}>
-                                  <Play className="w-4 h-4 text-white fill-current ml-0.5" />
+                                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${dark ? 'bg-cyan-500/90' : 'bg-blue-600/90'}`}>
+                                  <Play className="w-5 h-5 text-white fill-current ml-0.5" />
                                 </div>
                               </div>
                             )}
                           </div>
-                          <div className={`p-2 flex-1 flex flex-col justify-center ${dark ? 'bg-[#0f0f18]' : 'bg-white'}`}>
-                            <p className={`text-xs font-semibold line-clamp-2 ${isActive ? (dark ? 'text-cyan-400' : 'text-blue-600') : (dark ? 'text-gray-300' : 'text-gray-700')}`}>
+                          <div className={`p-3 flex-1 flex flex-col justify-center ${dark ? 'bg-[#0f0f18]' : 'bg-white'}`}>
+                            <p className={`text-sm font-semibold line-clamp-2 ${isActive ? (dark ? 'text-cyan-400' : 'text-blue-600') : (dark ? 'text-gray-300' : 'text-gray-700')}`}>
                               {episode.title}
                             </p>
                           </div>
