@@ -36,7 +36,6 @@ export default function VideoPlayer({
   const [activeEpisode, setActiveEpisode] = useState<VideoEpisode>(seasons[0].episodes[0]);
   const [showEpisodeList, setShowEpisodeList] = useState(true);
   
-  // NEW: State to track if the episode menu is in 'list' or 'grid' (thumbnail) view
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
 
   // Lock body scroll when modal is open
@@ -92,16 +91,16 @@ export default function VideoPlayer({
   };
 
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4"
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4"
       style={{ background: 'rgba(0,0,0,0.92)', backdropFilter: 'blur(12px)' }}>
 
-      {/* Main Modal Container - Fixed max height constraints */}
-      <div className={`relative w-full h-full sm:h-auto sm:max-w-7xl sm:max-h-[96vh] sm:rounded-2xl flex flex-col shadow-2xl border
+      {/* Main Modal Container */}
+      <div className={`relative w-full h-[100dvh] sm:h-auto sm:max-w-7xl sm:max-h-[92vh] sm:rounded-2xl flex flex-col shadow-2xl border
         ${dark ? 'bg-[#0d0d1a] border-cyan-500/20' : 'bg-white border-gray-200'}`}
         style={{ boxShadow: dark ? '0 0 60px rgba(0,212,255,0.15), 0 0 120px rgba(139,92,246,0.1)' : '0 20px 60px rgba(0,0,0,0.2)' }}>
 
-        {/* Header */}
-        <div className={`flex items-center justify-between px-4 py-3 border-b flex-shrink-0
+        {/* Header - Fixed */}
+        <div className={`flex items-center justify-between px-4 py-3 border-b flex-shrink-0 z-10
           ${dark ? 'border-cyan-500/20 bg-[#0a0a15]' : 'border-gray-200 bg-gray-50'}`}>
           <div className="flex items-center gap-3 min-w-0">
             <div className="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0">
@@ -134,18 +133,19 @@ export default function VideoPlayer({
           </div>
         </div>
 
-        {/* Main Content Area - Mobile scroll fix applied here (lg:overflow-hidden vs overflow-y-auto) */}
-        <div className="flex flex-col lg:flex-row flex-1 lg:overflow-hidden overflow-y-auto min-h-0 pb-6 lg:pb-0">
+        {/* Content Body */}
+        <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-y-auto lg:overflow-hidden">
           
-          {/* Left Column: Video Area */}
-          <div className="flex flex-col flex-none lg:flex-1 min-w-0 lg:overflow-y-auto lg:h-full">
+          {/* Left Column: Video Area & Description */}
+          <div className="flex flex-col flex-none lg:flex-1 lg:min-w-0 lg:overflow-y-auto pb-4 lg:pb-0">
+            
             {/* Video Player */}
-            <div className="relative w-full bg-black flex-shrink-0 aspect-video max-h-[60vh] lg:max-h-none">
+            <div className="w-full bg-black flex-shrink-0 aspect-video sm:max-h-[60vh] lg:max-h-[65vh]">
               <iframe
                 key={activeEpisode.id}
                 src={activeEpisode.embedUrl}
                 title={activeEpisode.title}
-                className="absolute inset-0 w-full h-full"
+                className="w-full h-full"
                 allowFullScreen
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -219,7 +219,7 @@ export default function VideoPlayer({
 
           {/* Right Column: Episode List Sidebar */}
           {showEpisodeList && (
-            <div className={`w-full lg:w-80 flex flex-col border-t lg:border-t-0 lg:border-l lg:h-full flex-shrink-0 lg:flex-shrink
+            <div className={`w-full lg:w-80 flex flex-col flex-shrink-0 lg:border-l
               ${dark ? 'border-cyan-500/20 bg-[#09090f]' : 'border-gray-200 bg-gray-50'}`}>
 
               {/* Season Selector & View Toggle */}
@@ -267,12 +267,11 @@ export default function VideoPlayer({
               </div>
 
               {/* Episode List / Grid Area */}
-              <div className="flex-1 lg:overflow-y-auto" style={{ scrollbarWidth: 'thin' }}>
+              <div className="flex-none lg:flex-1 lg:overflow-y-auto lg:min-h-0 pb-6 lg:pb-0" style={{ scrollbarWidth: 'thin' }}>
                 <div className={`p-2 ${viewMode === 'grid' ? 'grid grid-cols-2 gap-2' : 'space-y-1'}`}>
                   {activeSeason.episodes.map((episode, idx) => {
                     const isActive = episode.id === activeEpisode.id;
                     
-                    // THUMBNAIL GRID VIEW
                     if (viewMode === 'grid') {
                       return (
                         <button
@@ -289,14 +288,12 @@ export default function VideoPlayer({
                               alt={episode.title} 
                               className={`w-full h-full object-cover transition-opacity ${isActive ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'}`}
                             />
-                            {/* Overlay Badges */}
                             <div className="absolute top-1 left-1 bg-black/80 text-white px-1.5 py-0.5 rounded text-[10px] font-bold tracking-wider backdrop-blur-sm border border-white/10">
                               EP {idx + 1}
                             </div>
                             <div className="absolute bottom-1 right-1 bg-black/80 text-white px-1.5 py-0.5 rounded text-[10px] flex items-center gap-1 backdrop-blur-sm">
                               <Clock className="w-2.5 h-2.5" /> {episode.duration}
                             </div>
-                            {/* Active Play Icon Overlay */}
                             {isActive && (
                               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className={`w-8 h-8 rounded-full flex items-center justify-center ${dark ? 'bg-cyan-500/90' : 'bg-blue-600/90'}`}>
@@ -314,7 +311,6 @@ export default function VideoPlayer({
                       );
                     }
 
-                    // STANDARD LIST VIEW
                     return (
                       <button
                         key={episode.id}
