@@ -412,6 +412,112 @@ export const animeData: AnimeEntry[] = [
   },
 ];
 
+// AUTO-GENERATED FILE
+
+export const animeData = [
+  {
+    id: 'a1',
+    title: 'Ben 10 Alien Force 1X1',
+    description: 'Five years later, 15-year-old Ben Tennyson chooses to once again put on the Omnitrix and discovers that it has recalibrated and can now transform him into 10 brand new aliens. Joined by his super-powered cousin Gwen Tennyson and his equally powerful former enemy Kevin Levin, Ben is on a mission to find his missing Grandpa Max. In order to save his Grandpa, Ben must defeat the evil DNAliens, a powerful alien race intent on destroying the galaxy, starting with planet Earth.',
+    thumbnail: 'https://image.tmdb.org/t/p/w185/sEocAE3h5iu8CUNhdx1gHan7QJf.jpg',
+    genre: ['Anime, Action, Adventure, Drama, Sci-Fi'],
+    year: 2008,
+    rating: 10,
+    status: 'Completed',
+    episodes: 13,
+    studio: 'Man of Action',
+    featured: True,
+    seasons: [
+      {
+        id: 's1',
+        seasonNumber: 1,
+        title: 'Season 1',
+        episodes: [
+          {
+            id: 'e1',
+            title: 'Ep 1',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9qdjJid1lkV1kifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9DSUNRNmdCcTkifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e2',
+            title: 'Ep 2',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9Ed1VPUk5uYVAifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC81UmJDTExYWTEifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e3',
+            title: 'Ep 3',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC95OW1pSHQ4ZmEifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9mZlpxZVYwMUcifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e4',
+            title: 'Ep 4',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9VWVpEQ3J1TWMifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9JVEs3UFI1WG8ifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e5',
+            title: 'Ep 5',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9uaWJibnJSNTEifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9VUlV0djlNMWkifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e6',
+            title: 'Ep 6',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9oWGlfNE1aa2QifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9neFExQm1NU2RaIn1d',
+            duration: '24:00'
+          },
+          {
+            id: 'e7',
+            title: 'Ep 7',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9ya1Ezbk4yLU4ifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9TM3RfY0RHN2wifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e8',
+            title: 'Ep 8',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9yV3FZX1JfZzgifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC84MTdTaVVfckIifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e9',
+            title: 'Ep 9',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9JZUdTZlhDNHQifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC8yV2FCc3hUUVEifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e10',
+            title: 'Ep 10',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9xcldfaklaa3gifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9oendScXQxNksifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e11',
+            title: 'Ep 11',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9KeG1PNzQzNkIifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9EeWdVdFJjbmwifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e12',
+            title: 'Ep 12',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC8wdFVGMXBXV3YifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC90aHYxd1dISUsifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e13',
+            title: 'Ep 13',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9VUFp3dUVrVGgifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9LWEUwSnZaeTJfIn1d',
+            duration: '24:00'
+          },
+        ],
+      },
+    ],
+  },
+];
+
+
 // COURSES DATA
 export const coursesData: Course[] = [
   {
