@@ -595,8 +595,8 @@ export const linksData: Link[] = [
   { id: 'l7', name: 'freeCodeCamp', description: 'Learn to code for free.', url: 'https://freecodecamp.org', icon: 'https://cdn.simpleicons.org/freecodecamp/0A0A23', category: 'Learning' },
   { id: 'l8', name: 'Dribbble', description: 'Design inspiration community.', url: 'https://dribbble.com', icon: 'https://cdn.simpleicons.org/dribbble/EA4C89', category: 'Design' },
   { id: 'l9', name: 'Behance', description: 'Showcase and discover creative work.', url: 'https://behance.net', icon: 'https://cdn.simpleicons.org/behance/1769FF', category: 'Design' },
-  { id: 'l10', name: 'AnimeWorld', description: 'Anime & Cartoon Streaming website.', url: 'https://watchanimeworld.net/', icon: 'https://watchanimeworld.net/wp-content/uploads/AWI-SiteTitle-1.png', category: 'Anime' },
-  { id: 'l11', name: 'MyAnimeList', description: 'Largest online anime and manga database.', url: 'https://myanimelist.net', icon: 'https://cdn.simpleicons.org/myanimelist/2E51A2', category: 'Anime' },
+  { id: 'l10', name: 'AnimeWorld India', description: 'Anime & Cartoon Streaming website.', url: 'https://watchanimeworld.net/', icon: 'https://watchanimeworld.net/wp-content/uploads/AWI-SiteTitle-1.png', category: 'Anime' },
+  { id: 'l11', name: 'Dead Toons India', description: 'Largest online anime and cartoon database.', url: 'https://deadtoons.org/', icon: 'https://deadtoons.org/public/images/logo.png', category: 'Anime' },
   { id: 'l12', name: 'Crunchyroll', description: 'The world\'s most popular anime streaming service.', url: 'https://crunchyroll.com', icon: 'https://cdn.simpleicons.org/crunchyroll/F47521', category: 'Anime' },
   { id: 'l13', name: 'MoviesMod', description: 'Download the latest Hollywood and Bollywood movies in various resolutions including 480p, 720p, and 1080p and 4K, choose from list below.', url: 'https://modlist.in/', icon: 'https://modlist.in/favicont.png', category: 'Movies' },
 ];
