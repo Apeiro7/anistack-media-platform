@@ -510,6 +510,92 @@ export const animeData: AnimeEntry[] = [
           },
         ],
       },
+
+      {
+        id: 's2',
+        seasonNumber: 2,
+        title: 'Season 2',
+        episodes: [
+          {
+            id: 'e1',
+            title: 'Darkstar Rising',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9lQnQ5SlpDX1QifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9LMC0xNnAxOHQifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e2',
+            title: 'Alone Together',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC94QVBFeVNQelkifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9nS3V3cVYtU18ifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e3',
+            title: 'Good Copy, Bad Copy',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9IWngzUEVKYlAifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9QZDMweTVaWVkifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e4',
+            title: 'Save the Last Dance',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9iQm9QSTZtOUkifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9TRlBJdjR0V2cifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e5',
+            title: 'Undercover',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC85ZUg5TDhJLXgifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC84eU1EZTNnUDQifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e6',
+            title: 'Pet Project',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9ZQXkyX2Jsd0oifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9KOG9LSHpfUzkifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e7',
+            title: 'Grounded',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9Pc1d4RmRrZUMifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9tNTFVaGZDdHMifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e8',
+            title: 'Voided',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9WX3JhRHE0eUwifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9EZTE4TDdzcF8ifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e9',
+            title: 'Inside Man',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9HQ2RkUl9HWngifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9TMkxsUEtScEoifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e10',
+            title: 'Birds of a Feather',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9qRm40NHRla2IifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9oU0hKYlBlankifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e11',
+            title: 'Unearthed',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC95MnIyNmNpdmMifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9pVDhMd1hTWE4ifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e12',
+            title: 'War of the Worlds, Part 1',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC80ZzNrT04ySzcifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9jcDZjQWotaVkifV0%3D',
+            duration: '24:00'
+          },
+          {
+            id: 'e13',
+            title: 'War of the Worlds, Part 2',
+            embedUrl: 'https://watchanimeworld.net/api/player1.php?data=W3sibGFuZ3VhZ2UiOiJIaW5kaSIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC8xTVQ2YkJmTUgifSx7Imxhbmd1YWdlIjoiRW5nbGlzaCIsImxpbmsiOiJodHRwczpcL1wvc2hvcnQuaWN1XC9xWUZBVXVuMEgifV0%3D',
+            duration: '24:00'
+          },
+        ],
+      },
     ],
   },
 ];
