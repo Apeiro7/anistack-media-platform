@@ -133,13 +133,13 @@ export default function VideoPlayer({
           </div>
         </div>
 
-        {/* Content Body */}
-        <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-hidden">
+        {/* Content Body - SCROLL FIX APPLIED HERE */}
+        <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-y-auto lg:overflow-hidden">
           
-          {/* Left Column: Video Area & Description (Scrollable) */}
-          <div className="flex flex-col flex-none lg:flex-1 lg:min-w-0 overflow-y-auto pb-4 lg:pb-0" style={{ scrollbarWidth: 'thin' }}>
+          {/* Left Column: Video Area & Description */}
+          <div className="flex flex-col flex-none lg:flex-1 lg:min-w-0 lg:overflow-y-auto pb-4 lg:pb-0" style={{ scrollbarWidth: 'thin' }}>
             
-            {/* Video Player - Adjusted max-heights for PC visibility */}
+            {/* Video Player */}
             <div className="w-full bg-black flex-shrink-0 flex items-center justify-center overflow-hidden aspect-video lg:aspect-auto lg:h-[45vh] xl:h-[55vh]">
               <iframe
                 key={activeEpisode.id}
@@ -187,7 +187,7 @@ export default function VideoPlayer({
               </button>
             </div>
 
-            {/* Info Below Player (Scrolls if description is long) */}
+            {/* Info Below Player */}
             <div className={`px-4 py-4 flex-shrink-0 ${dark ? 'bg-[#0d0d1a]' : 'bg-white'}`}>
               <div className="flex flex-wrap items-center gap-2 mb-2">
                 {rating && (
@@ -219,7 +219,7 @@ export default function VideoPlayer({
 
           {/* Right Column: Episode List Sidebar */}
           {showEpisodeList && (
-            <div className={`w-full lg:w-80 flex flex-col flex-shrink-0 lg:border-l lg:h-full
+            <div className={`w-full lg:w-80 flex flex-col flex-none lg:flex-shrink-0 lg:border-l lg:h-full lg:overflow-hidden
               ${dark ? 'border-cyan-500/20 bg-[#09090f]' : 'border-gray-200 bg-gray-50'}`}>
 
               {/* Season Selector & View Toggle */}
