@@ -90,6 +90,16 @@ export default function VideoPlayer({
     upcoming: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
   };
 
+  // --- NEW: Dynamic Scrollbar Styles ---
+  const customScrollbar = dark
+    ? "[&::-webkit-scrollbar]:w-1.5 sm:[&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-gray-800 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-gray-700"
+    : "[&::-webkit-scrollbar]:w-1.5 sm:[&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-gray-400";
+    
+  const scrollbarStyle = {
+    scrollbarWidth: 'thin' as const,
+    scrollbarColor: dark ? '#1f2937 transparent' : '#d1d5db transparent' // Webkit fallback for Firefox
+  };
+
   return createPortal(
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4"
       style={{ background: 'rgba(0,0,0,0.92)', backdropFilter: 'blur(12px)' }}>
@@ -133,11 +143,11 @@ export default function VideoPlayer({
           </div>
         </div>
 
-        {/* Content Body */}
-        <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-y-auto lg:overflow-hidden">
+        {/* Content Body - Themed Scrollbars applied here */}
+        <div className={`flex flex-col lg:flex-row flex-1 min-h-0 overflow-y-auto lg:overflow-hidden ${customScrollbar}`} style={scrollbarStyle}>
           
-          {/* Left Column: Video Area & Description (ADDED lg:min-h-0 HERE to fix flexbox bug) */}
-          <div className="flex flex-col flex-none lg:flex-1 lg:min-w-0 lg:min-h-0 lg:overflow-y-auto pb-4 lg:pb-0" style={{ scrollbarWidth: 'thin' }}>
+          {/* Left Column: Video Area & Description */}
+          <div className={`flex flex-col flex-none lg:flex-1 lg:min-w-0 lg:min-h-0 lg:overflow-y-auto pb-4 lg:pb-0 ${customScrollbar}`} style={scrollbarStyle}>
             
             {/* Video Player */}
             <div className="w-full bg-black flex-shrink-0 aspect-video sm:max-h-[60vh] lg:max-h-[65vh]">
@@ -217,7 +227,7 @@ export default function VideoPlayer({
             </div>
           </div>
 
-          {/* Right Column: Episode List Sidebar (ADDED lg:min-h-0 HERE to fix flexbox bug) */}
+          {/* Right Column: Episode List Sidebar */}
           {showEpisodeList && (
             <div className={`w-full lg:w-96 flex flex-col flex-shrink-0 lg:border-l lg:min-h-0
               ${dark ? 'border-cyan-500/20 bg-[#09090f]' : 'border-gray-200 bg-gray-50'}`}>
@@ -266,10 +276,9 @@ export default function VideoPlayer({
                 </div>
               </div>
 
-              {/* Episode List Area (Scrolls correctly now!) */}
-              <div className="lg:flex-1 lg:overflow-y-auto lg:min-h-0 pb-6 lg:pb-0" style={{ scrollbarWidth: 'thin' }}>
+              {/* Episode List Area - Themed Scrollbar applied here */}
+              <div className={`lg:flex-1 lg:overflow-y-auto lg:min-h-0 pb-6 lg:pb-0 pr-1 ${customScrollbar}`} style={scrollbarStyle}>
                 
-                {/* ONE THUMBNAIL PER ROW */}
                 <div className={`p-3 ${viewMode === 'grid' ? 'flex flex-col gap-4' : 'space-y-1'}`}>
                   {activeSeason.episodes.map((episode, idx) => {
                     const isActive = episode.id === activeEpisode.id;
